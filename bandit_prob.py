@@ -2,8 +2,8 @@ import numpy as np
 class BanditProblem:
   def __init__(self, n_arms):
     self.n_arms = n_arms
-    rng = np.random.default_rng(seed=42)
-    vals = rng.integers(0, 3, (n_arms*2))
+    self.rng = np.random.default_rng(seed=42)
+    vals = self.rng.integers(0, 3, (n_arms*2))
     vals = vals = vals.reshape((n_arms, 2))
     self.vals = vals
 
